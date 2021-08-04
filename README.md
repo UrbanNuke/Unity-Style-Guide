@@ -817,19 +817,21 @@ When naming an asset use these tables to determine the prefix and suffix to use 
 
 > 4.2.4 [Prefabs](#anc-prefab)
 
-> 4.2.5 [Materials](#anc-materials)
+> 4.2.5 [Shaders](#anc-shaders)
 
-> 4.2.6 [Textures](#anc-textures)
+> 4.2.6 [Materials](#anc-materials)
 
-> 4.2.7 [Miscellaneous](#anc-misc)
+> 4.2.7 [Textures](#anc-textures)
 
-> 4.2.8 [Physics](#anc-physics)
+> 4.2.8 [Miscellaneous](#anc-misc)
 
-> 4.2.9 [Audio](#anc-audio)
+> 4.2.9 [Physics](#anc-physics)
 
-> 4.2.10 [User Interface](#anc-ui)
+> 4.2.10 [Audio](#anc-audio)
 
-> 4.2.11 [Effects](#anc-effects)
+> 4.2.11 [User Interface](#anc-ui)
+
+> 4.2.12 [Effects](#anc-effects)
 
 <a name="anc-common"></a>
 #### Most Common
@@ -907,9 +909,17 @@ All meshes in 3ds Max are lowercase to differentiate them from their FBX export.
 | Prefab Instance         | I       |            |                                  |
 | Scriptable Object       |     |        | Assigned "Blueprint" label in Editor |
 
+	
+<a name="anc-shaders"></a>
+
+#### 4.2.5 Shaders
+| Asset Type        | Prefix | Suffix | Notes |
+| ----------------- | ------ | ------ | ----- |
+| Shader            | SH_    |        |       |
+	
 <a name="anc-materials"></a>
 
-#### 4.2.5 Materials
+#### 4.2.6 Materials
 | Asset Type        | Prefix | Suffix | Notes |
 | ----------------- | ------ | ------ | ----- |
 | Material          | M_     |        |       |
@@ -918,7 +928,7 @@ All meshes in 3ds Max are lowercase to differentiate them from their FBX export.
 
 <a name="anc-textures"></a>
 
-#### 4.2.6 Textures
+#### 4.2.7 Textures
 | Asset Type              | Prefix     | Suffix     | Notes                            |
 | ----------------------- | ---------- | ---------- | -------------------------------- |
 | Texture                 | T_         |            |                                  |
@@ -940,7 +950,7 @@ All meshes in 3ds Max are lowercase to differentiate them from their FBX export.
 
 <a name="anc-textures-packing"></a>
 
-#### 4.2.6.1 Texture Packing
+#### 4.2.7.1 Texture Packing
 It is common practice to pack multiple layers of texture data into one texture. An example of this is packing Emissive, Roughness, Ambient Occlusion together as the Red, Green, and Blue channels of a texture respectively. To determine the suffix, simply stack the given suffix letters from above together, e.g. `_ERO`.
 
 > It is generally acceptable to include an Alpha/Opacity layer in your Diffuse/Albedo's alpha channel and as this is common practice, adding `A` to the `_D` suffix is optional.
@@ -948,7 +958,7 @@ It is common practice to pack multiple layers of texture data into one texture. 
 Packing 4 channels of data into a texture (RGBA) is not recommended except for an Alpha/Opacity mask in the Diffuse/Albedo's alpha channel as a texture with an alpha channel incurs more overhead than one without.
 <a name="anc-misc"></a>
 
-#### 4.2.7 Miscellaneous
+#### 4.2.8 Miscellaneous
 
 | Asset Type                      | Prefix | Suffix | Notes |
 | ------------------------------- | ------ | ------ | ----- |
@@ -957,7 +967,7 @@ Packing 4 channels of data into a texture (RGBA) is not recommended except for a
 | User Interface                  | UI_    |        |       |
 
 <a name="anc-physics"></a>
-#### 4.2.8 Physics
+#### 4.2.9 Physics
 
 | Asset Type        | Prefix | Suffix | Notes |
 | ----------------- | ------ | ------ | ----- |
@@ -965,7 +975,7 @@ Packing 4 channels of data into a texture (RGBA) is not recommended except for a
 
 <a name="anc-audio"></a>
 
-#### 4.2.9 Audio
+#### 4.2.10 Audio
 
 | Asset Type     | Prefix | Suffix | Notes                                                        |
 | -------------- | ------ | ------ | ------------------------------------------------------------ |
@@ -975,14 +985,14 @@ Packing 4 channels of data into a texture (RGBA) is not recommended except for a
 | Audio Class    |        |        | No prefix/suffix. Should be put in a folder called AudioClasses |
 
 <a name="anc-ui"></a>
-#### 4.2.10 User Interface
+#### 4.2.11 User Interface
 | Asset Type       | Prefix | Suffix | Notes |
 | ---------------- | ------ | ------ | ----- |
 | Font             | Font_  |        |       |
 | Texture (Sprite) | T_     | _GUI   |       |
 
 <a name="anc-effects"></a>
-#### 4.2.11 Effects
+#### 4.2.12 Effects
 | Asset Type      | Prefix | Suffix | Notes |
 | --------------- | ------ | ------ | ----- |
 | Particle System | PS_    |        |       |
